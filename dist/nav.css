@@ -1,0 +1,99 @@
+body {
+    margin: 0;
+    font-family: 'Barlow', sans-serif;
+}
+
+.navbar-box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 15px 0;
+}
+
+/* Add some padding to the body to prevent content from being hidden behind the navbar */
+body {
+    padding-top: 56px; /* Adjust based on the height of your navbar */
+}
+
+.navbar-box a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar-box a:hover {
+    color: #f0a500; /* Change to the color you want on hover */
+}
+
+.navbar-box .navbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-box .navbar-content .brand {
+    font-family: 'Gilda Display', serif;
+    font-size: 28px;
+    color: #f0a500; /* Primary brand color */
+}
+
+.navbar-box .navbar-content .nav-links {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar-box .navbar-content .nav-links li {
+    margin: 0 15px;
+}
+
+.navbar-box .navbar-content .nav-links li a {
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+}
+
+.navbar-box .navbar-content .book-now {
+    padding: 10px 20px;
+    background-color: #f0a500; /* Primary button color */
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.navbar-box .navbar-content .book-now:hover {
+    background-color: #e09e00; /* Slightly darker color for hover effect */
+}
+
+.navbar-box .menu-toggle {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .navbar-box .navbar-content {
+        flex-direction: column;
+    }
+
+    .navbar-box .navbar-content .nav-links {
+        flex-direction: column;
+        display: none;
+    }
+
+    .navbar-box .navbar-content .nav-links.show {
+        display: flex;
+    }
+
+    .navbar-box .menu-toggle {
+        display: block;
+        cursor: pointer;
+        font-size: 24px;
+        color: white;
+    }
+}
